@@ -1,0 +1,55 @@
+body{
+    background-color: lightskyblue;
+}
+
+
+
+.start_button, .rule_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50px, 50px);  
+
+}
+
+
+
+
+.start_button button{
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+}
+
+.rule_box{
+    width: 540px;
+    background: white;
+    border-radius: 5px;
+
+}
+
+.rule_box .rule_title{
+    height: 55px;
+    width: 100%;
+    border-bottom: 2px solid lightblue;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 24px;
+    font-weight: 500;
+
+}
+
+.rule_box .rule_list{
+    padding: 15px 35px;
+}
+
+.rule_box .rule_list .info{
+    margin: 5px 0;
+    font-size: 18px;
+}
