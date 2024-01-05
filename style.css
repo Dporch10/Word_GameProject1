@@ -53,3 +53,23 @@ body{
     margin: 5px 0;
     font-size: 18px;
 }
+
+.rule_box .rule_list .info span{
+    font-weight: 500;
+    color: red;
+}
+
+.rule_box .buttons{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 40px;
+    border-top: 2px solid lightblue;
+}
+
+.rule_box .buttons button{
+    margin:  0 5px;
+    height: 25px;
+    width: 200px;
+}
