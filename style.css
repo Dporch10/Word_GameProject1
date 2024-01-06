@@ -4,16 +4,13 @@ body{
 
 
 
-.start_button, .rule_box, .quiz_box{
+.start_button, .rule_box, .quiz_box, .result_tab{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(50px, 50px);  
+    transform: translate(-50%, -50%);  
 
 }
-
-
-
 
 .start_button button{
     font-size: 20px;
@@ -27,11 +24,12 @@ body{
 }
 
 .rule_box{
-    display:none;
     width: 540px;
     background: white;
     border-radius: 5px;
-
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
 }
 
 .rule_box .rule_title{
@@ -90,10 +88,13 @@ body{
 }
 
 .quiz_box{
-    display: none;
+    
     width: 550px;
     background: white;
     border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
 }
 
 .quiz_box header{
@@ -202,5 +203,55 @@ transition: all 0.2s ease;
 
 footer .next_button:hover{
     background: lightskyblue;
+}
+
+.result_tab{
+    background: white;
+    width: 450px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+
+}
+
+.result_tab .finished_text{
+    font-size: 30px;
+    font-weight: 500;
+    padding: 0 4px;
+}
+
+.result_tab .final_text span{
+    margin: 50px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+.final_score span p{
+
+    font-weight: 500;
+    padding: 0 4px;
+}
+
+.result_tab .buttons{
+    display: flex;
+    margin: 20px 0;
+}
+.result_tab .buttons button{
+    margin: 0 10px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    border:none;
+    border: 1px solid lightblue;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
