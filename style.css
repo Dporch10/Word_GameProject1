@@ -96,13 +96,16 @@ body{
 }
 
 .quiz_box header{
-    height: 60px;
+    position: relative;
+    z-index: 99;
+    height: 70px;
     padding: 0 30px;
     background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 5px 5px 0 0;
+    
 }
 
 .quiz_box header .title{
@@ -111,6 +114,67 @@ body{
 }
 
 .quiz_box header .timer{
-
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background: lightskyblue;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0 8px;
 }
+
+.quiz_box header .timer .time_title {
+    font-size: 15px;
+    font-weight: 400;
+    user-select: none;
+}
+
+.quiz_box header .timer .timer_secs {
+    font-size: 17px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    user-select: none;
+}
+
+.quiz_box section{
+    padding: 25px 30px 20px 30px;
+}
+
+.quiz_box section .quest_info{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.quiz_box section .quest_list{
+    padding: 20px 0;
+    display: block;
+}
+
+section .quest_list .names{
+    background: lightskyblue;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+section .quest_list .names:hover{
+    color: purple
+}
+
+.quest_list .names:last-child{
+    margin-bottom: 0px;
+}
+
