@@ -4,7 +4,7 @@ body{
 
 
 
-.start_button, .rule_box{
+.start_button, .rule_box, .quiz_box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -27,6 +27,7 @@ body{
 }
 
 .rule_box{
+    display:none;
     width: 540px;
     background: white;
     border-radius: 5px;
@@ -86,4 +87,30 @@ body{
 
 .buttons button.quit:hover{
     background-color: red;
+}
+
+.quiz_box{
+    width: 550px;
+    background: white;
+    border-radius: 5px;
+}
+
+.quiz_box header{
+    height: 60px;
+    padding: 0 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+}
+
+.quiz_box header .title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quiz_box header .timer{
+
+    
 }
