@@ -12,6 +12,13 @@ body{
 
 }
 
+.rule_box.activeInfo, .quiz_box.activeInfo{
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
 .start_button button{
     font-size: 20px;
     font-weight: 300;
