@@ -90,6 +90,7 @@ body{
 }
 
 .quiz_box{
+    display: none;
     width: 550px;
     background: white;
     border-radius: 5px;
@@ -176,5 +177,30 @@ section .quest_list .names:hover{
 
 .quest_list .names:last-child{
     margin-bottom: 0px;
+}
+
+.quiz_box footer{
+    height: 60px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .next_button{
+height: 40px;
+padding: 0 13px;
+font-size: 18px;
+font-weight: 400;
+border: none;
+outline: none;
+color: dark gray;
+cursor: pointer;
+transition: all 0.2s ease;
+}
+
+footer .next_button:hover{
+    background: lightskyblue;
 }
 
