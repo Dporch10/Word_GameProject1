@@ -1,29 +1,38 @@
 body{
-    background-color: lightskyblue;
+    background: purple;
 }
 
+::selection{
+    color: white;
+    background: #72abe9;
+}
 
-
-.start_button, .rule_box, .quiz_box, .result_tab{
+.start_button,
+.rule_box,
+.quiz_box,
+.result_tab{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);  
-
+    transform: translate(-50%, -50%);
+    
 }
 
-.rule_box.activeInfo, .quiz_box.activeInfo{
-    z-index: 5;
+.rule_box.activeInfo,
+.quiz_box.activeQuiz,
+.result_tab.activeResult{
     opacity: 1;
+    z-index: 5;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
 
 .start_button button{
-    font-size: 20px;
-    font-weight: 300;
-    color: black;
-    padding: 10px 20px;
+    font-size: 25px;
+    font-weight: 500;
+    color: purple;
+    padding: 15px 30px;
+    outline: none;
     border: none;
     border-radius: 5px;
     background: white;
@@ -34,86 +43,80 @@ body{
     width: 540px;
     background: white;
     border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
     pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.9);
+    transition: all 0.3s ease;
 }
 
-.rule_box .rule_title{
-    height: 55px;
-    width: 100%;
-    border-bottom: 2px solid lightblue;
+.rule_box .rule-title{
+    height: 60px;
+    width: 88%;
+    border-bottom: 1px solid purple;
     display: flex;
     align-items: center;
     padding: 0 30px;
-    font-size: 24px;
-    font-weight: 500;
-
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.rule_box .rule_list{
-    padding: 15px 35px;
+.rule_box .rule-list{
+    padding: 15px 30px;
 }
 
-.rule_box .rule_list .info{
+.rule_box .rule-list .rule{
     margin: 5px 0;
-    font-size: 18px;
+    font-size: 17px;
 }
 
-.rule_box .rule_list .info span{
-    font-weight: 500;
-    color: red;
+.rule_box .rule-list .rule span{
+    font-weight: 800;
+    color: purple;
 }
-
 .rule_box .buttons{
-    height: 50px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 40px;
-    border-top: 2px solid lightblue;
+    padding: 0 30px;
+    border-top: 1px solid purple;
 }
 
 .rule_box .buttons button{
-    margin:  0 5px;
-    height: 25px;
-    width: 200px;
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
     font-size: 16px;
     font-weight: 500;
-    border-radius: 5px;
-    border: none;
     cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.buttons button.restart:hover{
-    background-color: green;
-}
-
-.buttons button.quit:hover{
-    background-color: red;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid purple;
+    transition: all 0.3s ease;
 }
 
 .quiz_box{
-    
     width: 550px;
     background: white;
     border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
     pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.9);
+    transition: all 0.3s ease;
 }
 
 .quiz_box header{
     position: relative;
-    z-index: 99;
+    z-index: 2;
     height: 70px;
     padding: 0 30px;
     background: white;
+    border-radius: 5px 5px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 5px 5px 0 0;
     
 }
 
@@ -123,142 +126,229 @@ body{
 }
 
 .quiz_box header .timer{
+    color: black;
+    background: whitesmoke;
+    border: 1px solid #c8a5ef;
+    height: 45px;
+    padding: 0 8px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 145px;
-    height: 45px;
-    background: lightskyblue;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 0 8px;
 }
 
-.quiz_box header .timer .time_title {
-    font-size: 15px;
+.quiz_box header .timer .time_title{
     font-weight: 400;
+    font-size: 17px;
     user-select: none;
 }
 
-.quiz_box header .timer .timer_secs {
-    font-size: 17px;
+.quiz_box header .timer .timer_secs{
+    font-size: 18px;
     font-weight: 500;
     height: 30px;
     width: 45px;
-    background: white;
+    color: white;
     border-radius: 5px;
-    text-align: center;
     line-height: 30px;
+    text-align: center;
+    background: black;
+    border: 1px solid purple;
     user-select: none;
 }
 
-.quiz_box section{
+
+
+section{
     padding: 25px 30px 20px 30px;
+    background: white;
 }
 
-.quiz_box section .quest_info{
+section .que_text{
     font-size: 25px;
     font-weight: 600;
 }
 
-.quiz_box section .quest_list{
-    padding: 20px 0;
-    display: block;
+section .option_list{
+    padding: 20px 0px;
+    display: block;   
 }
 
-section .quest_list .names{
-    background: lightskyblue;
-    border: 1px solid lightblue;
+section .option_list .option{
+    background: rgb(236, 202, 236);
+    border: 1px solid black;
     border-radius: 5px;
-    padding: 10px 15px;
-    margin-bottom: 15px;
+    padding: 8px 15px;
     font-size: 17px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    cursor: pointer;
 }
 
-section .quest_list .names:hover{
-    color: purple
-}
-
-.quest_list .names:last-child{
+section .option_list .option:last-child{
     margin-bottom: 0px;
 }
 
-.quiz_box footer{
+section .option_list .option:hover{
+    color: white;
+    background: purple;
+    border: 1px solid black;
+}
+
+section .option_list .option.correct{
+    color: white;
+    background: green;
+    border: 1px solid black;
+}
+
+section .option_list .option.incorrect{
+    color: white;
+    background: red;
+    border: 1px solid black;
+}
+
+section .option_list .option.disabled{
+    pointer-events: none;
+}
+
+section .option_list .option .icon{
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    line-height: 24px;
+}
+
+
+footer{
     height: 60px;
-    width: 100%;
     padding: 0 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-top: 1px solid lightgrey;
 }
 
-footer .next_button{
-height: 40px;
-padding: 0 13px;
-font-size: 18px;
-font-weight: 400;
-border: none;
-outline: none;
-color: dark gray;
-cursor: pointer;
-transition: all 0.2s ease;
+footer .total_que span{
+    display: flex;
+    user-select: none;
 }
 
-footer .next_button:hover{
-    background: lightskyblue;
+footer .total_que span p{
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+footer .total_que span p:first-child{
+    padding-left: 0px;
+}
+
+footer button{
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    background: purple;
+    border: 1px solid black;
+    line-height: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: all 0.2s ease;
+}
+
+footer button:hover{
+    background: green;
+}
+
+footer button.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
 }
 
 .result_tab{
     background: white;
-    width: 450px;
-    padding: 25px 30px;
     border-radius: 5px;
     display: flex;
-    text-align: center;
+    padding: 25px 30px;
+    width: 500px;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
     pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.9);
-
+    transition: all 0.2s ease;
 }
 
+
+
 .result_tab .finished_text{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 500;
-    padding: 0 4px;
 }
 
 .result_tab .final_text span{
-    margin: 50px 0;
+   display: flex;
+    margin: 10px 0;
     font-size: 18px;
     font-weight: 500;
 }
-.final_score span p{
 
-    font-weight: 500;
-    padding: 0 4px;
+.result_tab .final_text span p{
+    padding: 0 2px;
+    display: flex;
+    font-weight: 600;
 }
 
 .result_tab .buttons{
     display: flex;
     margin: 20px 0;
 }
+
 .result_tab .buttons button{
     margin: 0 10px;
-    height: 40px;
+    height: 45px;
     padding: 0 20px;
     font-size: 18px;
     font-weight: 500;
-    border-radius: 5px;
-    border:none;
-    border: 1px solid lightblue;
     cursor: pointer;
-    transition: all 0.2s ease;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid purple;
+    transition: all 0.3s ease;
 }
 
+.buttons button.restart{
+    color: white;
+    background: purple;
+}
+
+.buttons button.restart:hover{
+    background: green;
+}
+
+.buttons button.quit{
+    color: purple;
+    background: white;
+}
+
+.buttons button.quit:hover{
+    color: white;
+    background: red;
+}

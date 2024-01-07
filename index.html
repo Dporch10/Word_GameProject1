@@ -1,81 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DP's Sports Quiz</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="index.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DP's Sports Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <div class="start_button"><button>Start Quiz</button></div>
 
-    </head>
-
-    <body>
-            <div class="start_button"><button>Start Quiz</button></div>
-
-            <div class="rule_box">
-                <div class="rule_title">
-                     <span>DP's Rules</span>
+    <div class="rule_box">
+        <div class="rule-title"><span>DP's Game Rules</span></div>
+        <div class="rule-list">
+            <div class="rule">1. You can ONLY select one answer.</div>
+            <div class="rule">2. You will have only <span>10 seconds</span> to answer each question.</div>
+            <div class="rule">3. Once the timer goes off, you cannot select another answer.</div>
+            <div class="rule">4. You must finish the quiz before you can exit.</div>
+            <div class="rule">5. Points will be shown based on the correct answers.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
     </div>
-                <div class="rule_list">
 
-                <div class="info">1. You can ONLY select one answer.</div>
-                <div class="info">2. You will have only <span>10 seconds</span> to answer each question.</div>
-                <div class="info">3. Once the timer goes off, you cannot select another question.</div>
-                <div class="info">4. You must finish the quiz before you can exit.</div>
-                <div class="info">5. Points will be shown based on the correct answers.</div>
-            </div>    
-
-            <div class="buttons">
-                <button class="quit">Exit</button>
-                <button class="restart">Continue</button>
-
-                </div>
+    <div class="quiz_box">
+        <header>
+            <div class="title">DP's Sports Quiz</div>
+            <div class="timer">
+                <div class="time_title">Time Left</div>
+                <div class="timer_secs">10</div>
+            </div>
+        </header>
+        <section>
+            <div class="que_text">
             </div>
 
-            <div class="quiz_box">
-                <header>
-                    <div class="title">DP's Sports Quiz </div>
-                    <div class="timer">
-                        <div class="time_title">Time Left</div>
-                        <div class="timer_secs">10</div>
-                    </div>
-                </header>
-                <section>
-                    <div class="quest_info">
-                        <span>Which QB has the most Superbowl Wins?</span>
-                    </div>
-                    <div class="quest_list">
-                        <div class="names">
-                            <span>Patrick Mahomes</span>
-                        </div>
-                     <div class="names">
-                            <span>Peyton Manning</span>
-                        </div>   
-                    <div class="names">
-                            <span>Tom Brady</span>
-                        </div>    
-                        <div class="names">
-                            <span>Drew Brees</span>
-                        </div>    
-                    </div>
-                </section>
-
-                <footer>
-                    <button class="next_button">Next Question</button>
-                </footer>
+            <div class="option_list">
             </div>
+        </section>
 
-            <div class="result_tab">
-                <div class="finished_text">You are All Done!</div>
-                <div class="final_text">
-                    <span>You have scored <p>2</p>out of<p>5</p></span>
-                </div>
-                <div class="buttons">
-                    <button class="restart">Start Over</button>
-                    <button class="quit">Quit</button>
-                </div>
+     
+        <footer>
+            <div class="total_que">
+                
             </div>
+            <button class="next_button">Next Question</button>
+        </footer>
+    </div>
 
-            <script src="index.js"></script>
-    </body>
+    <div class="result_tab">
+       
+        <div class="finished_text">You've completed the Quiz!</div>
+        <div class="final_text">
+        </div>
+
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="index.js"></script>
+
+</body>
 </html>
