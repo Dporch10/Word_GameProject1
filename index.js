@@ -60,7 +60,7 @@ restart_quiz.onclick = ()=>{
 quit_quiz.onclick = ()=>{
     window.location.reload(); 
 }
-
+//**/*Title: Create a Quiz App with Timer using HTML CSS & JavaScript* Author:CodingNepal Date: (2020)Availability: (https://www.youtube.com/watch?v=WUBhpSRS_fk)* **/
 const next_button = document.querySelector("footer .next_button");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 
@@ -107,7 +107,7 @@ function showQuestions(index){
 let tickIconTag = '<div class="icon tick"></div>';
 let crossIconTag = '<div class="icon cross"></div>';
 
-
+/**Title: Create a Quiz App with Timer using HTML CSS & JavaScript* Author:CodingNepal Date: (2020)Availability: (https://www.youtube.com/watch?v=WUBhpSRS_fk)* **/
 function optionSelected(answer){
     clearInterval(counter); 
     clearInterval(counterLine); 
@@ -159,7 +159,7 @@ function showResult(){
         scoreText.innerHTML = scoreTag;
     }
 }
-
+/**Title: Create a Quiz App with Timer using HTML CSS & JavaScript* Author:CodingNepal Date: (2020)Availability: (https://www.youtube.com/watch?v=WUBhpSRS_fk)* **/
 function startTimer(time){
     counter = setInterval(timer, 1000);
     function timer(){

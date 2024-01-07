@@ -1,7 +1,7 @@
 body{
     background: purple;
 }
-
+/**Title: Create a Quiz App with Timer using HTML CSS & JavaScript* Author:CodingNepal Date: (2020)Availability: (https://www.youtube.com/watch?v=WUBhpSRS_fk)* **/
 ::selection{
     color: white;
     background: #72abe9;
@@ -188,7 +188,7 @@ section .option_list .option{
     align-items: center;
     justify-content: space-between;
 }
-
+/*Title: Create a Quiz App with Timer using HTML CSS & JavaScript* Author:CodingNepal Date: (2020)Availability: (https://www.youtube.com/watch?v=WUBhpSRS_fk)* **/
 section .option_list .option:last-child{
     margin-bottom: 0px;
 }
@@ -279,7 +279,7 @@ footer button.show{
     pointer-events: auto;
     transform: scale(1);
 }
-
+/*Title: Create a Quiz App with Timer using HTML CSS & JavaScript* Author:CodingNepal Date: (2020)Availability: (https://www.youtube.com/watch?v=WUBhpSRS_fk)* **/
 .result_tab{
     background: white;
     border-radius: 5px;
